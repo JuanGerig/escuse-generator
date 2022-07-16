@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="excuseGeneratorButton">Haz click aqui para generar tu excusa!</button>
+    <div id="displayExcuse"> Haz click arriba ^^ Si llegaste tarde o no hiciste la tarea!</div>
+    <script>
+        let button = document.getElementById('excuseGeneratorButton');
+        let who = ['El perro','Mi abuela','La tortuga','Mi pájaro'];
+        let action = ['se comió','orinó','botó','rompió'];
+        let what = ['mi tarea','las llaves','el carro'];
+        let when = ['cuando terminé de desayunar','justo al salir','cuando venía en camino','mientras estaba comiendo','mientras estaba orando'];
+        
+        let result = document.getElementById('displayExcuse')
+        button.addEventListener('click', function(){
+            let randomWho = who[Math.floor(Math.random()*who.length)];
+            let randomAction = action[Math.floor(Math.random()*action.length)];
+            let randomWhat = what[Math.floor(Math.random()*what.length)];
+            let randomWhen = when[Math.floor(Math.random()*when.length)];
+
+            result.innerHTML = " "+ randomWho + " "+ randomAction + " "+ randomWhat + " " + randomWhen;
+        })
+    </script>
+</body>
+</html>
